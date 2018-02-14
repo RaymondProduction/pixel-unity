@@ -33,8 +33,7 @@ public class Rabbit : MonoBehaviour {
 	}
 
 	IEnumerator Shot () {
-		 yield return new WaitForSeconds(2f);
-		Destroy(carrot);
+		 yield return new WaitForSeconds(1f);
 		carrot = Instantiate(carrotOriginal, transform.position, Quaternion.identity) as GameObject;
  		carrot.SetActive(true);
 		StartCoroutine(Shot());
