@@ -6,15 +6,15 @@ public class Rabbit : MonoBehaviour {
 
 	public int jumpForce = 600, direction = 0;
 
-	public GameObject carrotOriginal;
+	public GameObject carrotOriginal, pixel;
 	private GameObject carrot; 
 	private Rigidbody2D rb;
+	private int  shootingTrigger = 0;
 	private bool ground = true;
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
-		carrot = Instantiate(carrotOriginal, transform.position, Quaternion.identity) as GameObject;
- 		carrot.SetActive(true);
-		StartCoroutine(Shot());
+		GetComponent<SpriteRenderer>().flipX = true;
+		ShootingByCarrot(-1F);
 	}
 	
 	// Update is called once per frame
@@ -24,6 +24,11 @@ public class Rabbit : MonoBehaviour {
 			ground = false;
 			rb.AddForce(Vector2.up*jumpForce);
 		}
+		if (pixel.transform.position.x>transform.position.x && pixel.transform.position.y+2>transform.position.y &&  shootingTrigger==0) {
+			shootingTrigger =1;
+			GetComponent<SpriteRenderer>().flipX = false;
+			StartCoroutine(Shot());
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
@@ -32,10 +37,16 @@ public class Rabbit : MonoBehaviour {
 		}
 	}
 
-	IEnumerator Shot () {
-		 yield return new WaitForSeconds(1f);
-		carrot = Instantiate(carrotOriginal, transform.position, Quaternion.identity) as GameObject;
+	void ShootingByCarrot(float partOfSpeed){
+		carrot = Instantiate(carrotOriginal, new Vector2(transform.position.x, pixel.transform.position.y), Quaternion.identity) as GameObject;
+		carrot.GetComponent<SpriteRenderer>().flipX = partOfSpeed < 0;
+		carrot.GetComponent<Carrot>().speed *= partOfSpeed; 
  		carrot.SetActive(true);
+	}
+
+	IEnumerator Shot () {
+		yield return new WaitForSeconds(Random.Range(0.5F,2F));
+		ShootingByCarrot(1f);
 		StartCoroutine(Shot());
 	 }
 }

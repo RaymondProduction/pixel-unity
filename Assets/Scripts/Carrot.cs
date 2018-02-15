@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Carrot : MonoBehaviour {
-	public float speed =50f;
-	// Use this for initialization
+	public float speed;
+	public GameObject repsawn;
+	private GameObject spaceDie;
 	void Start () {
 		StartCoroutine(instObj());
 	}
@@ -12,14 +13,21 @@ public class Carrot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		transform.Translate(Vector2.right * speed * Time.deltaTime);
-		// if (transform.position.x>9 || transform.position.x< -9) {
-		// 	Destroy(this.gameObject);
-		// }
 	}
 
-	
+	void OnTriggerEnter2D (Collider2D other){
+		Color tmp = other.GetComponent<SpriteRenderer> ().color;
+		if (other.tag == "Player" && tmp.a > 0.2f) {
+			tmp.a -= 0.1f;
+			other.GetComponent<SpriteRenderer> ().color = tmp;
+			Destroy(gameObject);
+		}
+		if (other.tag == "Player" && tmp.a<=0.2f) {
+			repsawn.GetComponent<Respawn>().Repsawn(other);
+		}
+	}
      IEnumerator instObj () {
-		 yield return new WaitForSeconds(1.5f);
+		 yield return new WaitForSeconds(3f);
 		 Destroy(gameObject);
 	 }
 }

@@ -11,7 +11,7 @@ public class Pixel : MonoBehaviour {
 	public GameObject shot_original;
 	private GameObject shot;
 	private Rigidbody2D rb;
-	public int jumpForce = 600, direction = 0;
+	public int jumpForce = 1000, direction = 0;
 
 	void Start(){
 		rb = GetComponent<Rigidbody2D>();
@@ -61,7 +61,7 @@ public class Pixel : MonoBehaviour {
 	}
 
      IEnumerator instObj () {
-		 yield return new WaitForSeconds(0.5f);
+		 yield return new WaitForSeconds(0.1f);
 		// Destroy(shot);
 		 shot_run = true;
 	 }

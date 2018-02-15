@@ -18,6 +18,12 @@ public class Shot : MonoBehaviour {
 		// }
 	}
 
+	void OnTriggerEnter2D (Collider2D other){
+		if (other.tag == "Carrot" ) {
+			Destroy(other.gameObject);
+		}
+	}
+
 	
      IEnumerator instObj () {
 		 yield return new WaitForSeconds(1.5f);
