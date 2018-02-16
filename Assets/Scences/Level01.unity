@@ -367,7 +367,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4782809618193078, guid: d2a75b22d6375fb478697dcc55d7f14e, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1315730629051592, guid: d2a75b22d6375fb478697dcc55d7f14e, type: 2}
       propertyPath: m_Name
@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carrotOriginal: {fileID: 1501419708}
-  pixel: {fileID: 1123446521}
+  pixel: {fileID: 2022552090}
 --- !u!50 &1496065569
 Rigidbody2D:
   serializedVersion: 4
@@ -1298,6 +1298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  bum: {fileID: 21300000, guid: 5f7fa9fd251f7c34681afa20f0ec0e17, type: 3}
   repsawn: {fileID: 903648845}
 --- !u!212 &1501419710
 SpriteRenderer:
@@ -1354,7 +1355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1501419712
 BoxCollider2D:
@@ -1594,7 +1595,7 @@ GameObject:
   - component: {fileID: 2022552095}
   m_Layer: 0
   m_Name: PixelDown
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1714,4 +1715,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pixel: {fileID: 1123446521}
   mainCamera: {fileID: 313975119}
+  rabbit: {fileID: 1496065567}
   smileSadness: {fileID: 21300000, guid: b696450ca4658d44b80a2a11b4857c4a, type: 3}

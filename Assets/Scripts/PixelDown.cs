@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PixelDown : MonoBehaviour {
 
-	public GameObject pixel, mainCamera;
+	public GameObject pixel, mainCamera, rabbit;
 	public Sprite smileSadness;
 	private bool ground = false;
 
@@ -18,6 +18,7 @@ public class PixelDown : MonoBehaviour {
 		if (ground && Input.GetKeyDown(KeyCode.UpArrow)) {
 			gameObject.SetActive(false);
 			mainCamera.GetComponent<CamMove>().pixel = pixel;
+			rabbit.GetComponent<Rabbit>().pixel = pixel;
 			pixel.SetActive(true);
 		}
 	}
