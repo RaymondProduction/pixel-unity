@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Rabbit : MonoBehaviour {
 
-	public int jumpForce = 600, direction = 0;
+	private int jumpForce = 106000, direction = 0;
 
 	public GameObject carrotOriginal, pixel;
 	private GameObject carrot; 
 	private Rigidbody2D rb;
 	private int  shootingTrigger = 0;
-	private bool ground = true;
+	private bool ground = false;
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		GetComponent<SpriteRenderer>().flipX = true;

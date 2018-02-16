@@ -22,6 +22,9 @@ public class Carrot : MonoBehaviour {
 			other.GetComponent<SpriteRenderer> ().color = tmp;
 			Destroy(gameObject);
 		}
+		if (other.tag == "Player" && other.GetComponent<SpriteRenderer>().sprite == other.GetComponent<Pixel>().sprites[3]) {
+			other.GetComponent<Rigidbody2D>().gravityScale = 0.1f;
+		}
 		if (other.tag == "Player" && tmp.a<=0.2f) {
 			repsawn.GetComponent<Respawn>().Repsawn(other);
 		}
