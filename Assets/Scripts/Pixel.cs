@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pixel : MonoBehaviour {
 	public float speed =20f;
 
-	public Sprite[] sprites = new Sprite[5];
+	public Sprite[] sprites = new Sprite[3];
 
 	private bool shot_run = true, ground = false;
 	public GameObject shot_original;
@@ -15,30 +15,16 @@ public class Pixel : MonoBehaviour {
 
 	void Start(){
 		rb = GetComponent<Rigidbody2D>();
-		rb.gravityScale =0;
-		GetComponent<SpriteRenderer>().sprite = sprites[3];
-		GetComponent<CircleCollider2D>().enabled = false;
-		//shot = Instantiate(shot_original, transform.position, Quaternion.identity) as GameObject;
 	}
 	void Update(){
-		if (Input.GetKey(KeyCode.LeftArrow) && GetComponent<SpriteRenderer>().sprite != sprites[4]) {
+		if (Input.GetKey(KeyCode.LeftArrow)) {
 			direction = 1;
 			GetComponent<SpriteRenderer>().sprite = sprites[1];
 		//	transform.Translate(Vector2.left * speed * Time.deltaTime);
 			rb.MovePosition(rb.position+Vector2.left * speed * Time.deltaTime);
 		}
 
-		if (GetComponent<SpriteRenderer>().sprite == sprites[3] && ground) {
-			GetComponent<SpriteRenderer>().sprite = sprites[4];
-		}
-
-		if (GetComponent<SpriteRenderer>().sprite == sprites[4] && ground && Input.GetKey(KeyCode.UpArrow)) {
-			jumpForce = 200;
-			rb.gravityScale = 1f;
-			GetComponent<CircleCollider2D>().enabled = true;
-		}
-
-		if (Input.GetKey(KeyCode.RightArrow) && GetComponent<SpriteRenderer>().sprite != sprites[4]) {
+		if (Input.GetKey(KeyCode.RightArrow)) {
 			jumpForce = 1000;
 			direction = 2;
 			GetComponent<SpriteRenderer>().sprite = sprites[2];
@@ -76,7 +62,7 @@ public class Pixel : MonoBehaviour {
 	}
 
      IEnumerator instObj () {
-		 yield return new WaitForSeconds(0.1f);
+		 yield return new WaitForSeconds(0.5f);
 		// Destroy(shot);
 		 shot_run = true;
 	 }
