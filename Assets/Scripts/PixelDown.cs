@@ -8,8 +8,14 @@ public class PixelDown : MonoBehaviour {
 	public Sprite smileSadness;
 	private bool ground = false;
 
+	public AudioSource speack, speakSadness, speackUp;
+	void Start(){
+		speack.Play();
+	}
+
     void OnCollisionEnter2D(Collision2D other) {
 		if (other.gameObject.tag == "Ground") {
+			speakSadness.Play();
 			GetComponent<SpriteRenderer>().sprite = smileSadness;
 			ground = true;
 		}
@@ -19,6 +25,7 @@ public class PixelDown : MonoBehaviour {
 			gameObject.SetActive(false);
 			mainCamera.GetComponent<CamMove>().pixel = pixel;
 			rabbit.GetComponent<Rabbit>().pixel = pixel;
+			speackUp.Play();
 			pixel.SetActive(true);
 		}
 	}

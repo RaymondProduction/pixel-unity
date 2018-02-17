@@ -24,6 +24,18 @@
      id="defs4">
     <linearGradient
        inkscape:collect="always"
+       id="linearGradient6763">
+      <stop
+         style="stop-color:#ffdd55;stop-opacity:1;"
+         offset="0"
+         id="stop6759" />
+      <stop
+         style="stop-color:#ff2a2a;stop-opacity:1"
+         offset="1"
+         id="stop6761" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        id="linearGradient7169">
       <stop
          style="stop-color:#ffffff;stop-opacity:1;"
@@ -2129,6 +2141,28 @@
        y2="894.65466"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.93755148,0,0,1.4588018,-168.84627,-399.95494)" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6763"
+       id="radialGradient6765"
+       cx="-2397.5107"
+       cy="-1280.608"
+       fx="-2397.5107"
+       fy="-1280.608"
+       r="303.00475"
+       gradientTransform="matrix(1.0000004,0,0,1.0239881,9.6587553e-4,28.593184)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4146"
+       id="radialGradient6765-0"
+       cx="-2397.5107"
+       cy="-1280.608"
+       fx="-2397.5107"
+       fy="-1280.608"
+       r="303.00476"
+       gradientTransform="matrix(1.0000004,0,0,1.0239881,9.6587553e-4,28.593184)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -2137,9 +2171,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.30019977"
-     inkscape:cx="-1398.4644"
-     inkscape:cy="1594.3854"
+     inkscape:zoom="0.12220057"
+     inkscape:cx="-2040.308"
+     inkscape:cy="2310.1284"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -13289,6 +13323,49 @@
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="szscs" />
       </g>
+    </g>
+    <g
+       id="g6793"
+       transform="matrix(0.83205396,0,0,0.83205396,-263.35155,-175.18627)"
+       inkscape:export-filename="C:\Users\Public\Documents\Unity Projects\pixel\Assets\Sprites\bum.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         transform="matrix(0.65293499,0,0,0.64267189,-219.35186,-351.73998)"
+         inkscape:transform-center-y="-5.3201662"
+         inkscape:transform-center-x="15.086536"
+         d="m -2192.29,-971.29034 -222.036,-107.80976 -150.4019,195.70942 33.9202,-244.48382 -232.6074,-82.5632 242.9998,-43.2896 6.6427,-246.7363 116.2619,217.7295 236.7128,-69.9282 -171.1461,177.8537 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.339026"
+         sodipodi:arg1="0.71070743"
+         sodipodi:r2="107.42113"
+         sodipodi:r1="325.51859"
+         sodipodi:cy="-1183.6489"
+         sodipodi:cx="-2439.0007"
+         sodipodi:sides="5"
+         id="path6741-1"
+         style="fill:url(#radialGradient6765-0);fill-opacity:1;stroke:#000000;stroke-width:0.9375;stroke-opacity:1"
+         sodipodi:type="star" />
+      <path
+         transform="matrix(0.42285453,0,0,0.41620793,-781.65436,-620.50418)"
+         inkscape:transform-center-y="-3.4454539"
+         inkscape:transform-center-x="9.7703548"
+         d="m -2192.29,-971.29034 -222.036,-107.80976 -150.4019,195.70942 33.9202,-244.48382 -232.6074,-82.5632 242.9998,-43.2896 6.6427,-246.7363 116.2619,217.7295 236.7128,-69.9282 -171.1461,177.8537 z"
+         inkscape:randomized="0"
+         inkscape:rounded="0"
+         inkscape:flatsided="false"
+         sodipodi:arg2="1.339026"
+         sodipodi:arg1="0.71070743"
+         sodipodi:r2="107.42113"
+         sodipodi:r1="325.51859"
+         sodipodi:cy="-1183.6489"
+         sodipodi:cx="-2439.0007"
+         sodipodi:sides="5"
+         id="path6741"
+         style="fill:url(#radialGradient6765);fill-opacity:1;stroke:#000000;stroke-width:0.9375;stroke-opacity:1"
+         sodipodi:type="star" />
     </g>
   </g>
 </svg>

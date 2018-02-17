@@ -38,8 +38,9 @@ public class Rabbit : MonoBehaviour {
 	}
 
 	void ShootingByCarrot(float partOfSpeed){
-		carrot = Instantiate(carrotOriginal, new Vector2(transform.position.x, pixel.transform.position.y), Quaternion.identity) as GameObject;
+		carrot = Instantiate(carrotOriginal, new Vector2(transform.position.x, transform.position.y), Quaternion.identity) as GameObject;
 		carrot.GetComponent<SpriteRenderer>().flipX = partOfSpeed < 0;
+		carrot.GetComponent<Carrot>().target =pixel.transform.position;
 		carrot.GetComponent<Carrot>().speed *= partOfSpeed; 
  		carrot.SetActive(true);
 	}
