@@ -19,10 +19,11 @@ public class Pixel : MonoBehaviour {
 	private Rigidbody2D rb;
 	// сила прижка и направление двиежения игрока соответсвенно
 	public int jumpForce = 1000, direction = 0;
-
+	public AudioSource  speackUp;
 	void Start(){
 		// инициализируем в rb обнет отвечающий за физику
 		rb = GetComponent<Rigidbody2D>();
+		speackUp.Play();
 	}
 	void Update(){
 		// Нажатие кнопки влево
